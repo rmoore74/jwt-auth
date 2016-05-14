@@ -6,11 +6,11 @@ router.get('/', function(req, res) {
 });
 
 router.get('/login', function(req, res) {
-    res.render('login');
+    res.render('login', { title: 'Login - JWT Auth Example' });
 });
 
 router.get('/register', function(req, res) {
-    res.render('register');
+    res.render('register', { title: 'Register - JWT Auth Example' });
 });
 
 module.exports = router;
