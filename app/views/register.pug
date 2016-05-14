@@ -1,0 +1,18 @@
+doctype html
+html
+    include ./partials/header.pug
+    body.container(style='width: 700px')
+        include ./partials/navbar.pug
+        .form-container
+            h2 Register
+            .form-group
+                label(for='username') Username
+                input.form-control#username(type='text', placeholder='Username')
+            .form-group
+                label(for='password') Password
+                input.form-control#password(type='password')
+            .form-group
+                label(for='confpassword') Confirm   
+                input.form-control#confpassword(type='password')
+            button.btn.btn-primary(type='submit') Register
+            a.btn.btn-link(href='/') Cancel

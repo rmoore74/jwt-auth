@@ -1,0 +1,14 @@
+doctype html
+html
+    include ./partials/header.pug
+    body.container(style='width: 700px')
+        include ./partials/navbar.pug
+        .jumbotron
+            h2 JWT Auth Example
+            p Journey with me and explore the wonderful world of JSON Web Tokens.
+            p
+                a.btn.btn-primary.btn-lg(href='/login', role='button') Get started...
+        h3 What on earth is JWT?
+        blockquote
+            p JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. 
+            footer Some genius over at <cite title="jwt.io">http://jwt.io/</cite>
