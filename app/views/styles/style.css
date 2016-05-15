@@ -2,6 +2,10 @@ body {
     margin: 10px;
 }
 
+.container {
+    width: 700px;
+}
+
 .form-container {
     margin: auto;
     width: 400px;

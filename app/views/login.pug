@@ -1,15 +1,15 @@
 doctype html
 html
     include ./partials/header.pug
-    body.container(style='width: 700px')
+    body.container
         include ./partials/navbar.pug
-        .form-container
+        form.form-container
             h2 Login
             .form-group
                 label(for='username') Username
-                input.form-control#username(type='text', placeholder='Username')
+                input.form-control#username(type='text', placeholder='Username' required)
             .form-group
                 label(for='password') Password
-                input.form-control#password(type='password')
+                input.form-control#password(type='password' required)
             button.btn.btn-primary(type='submit') Login
             a.btn.btn-link(href='/register') Register

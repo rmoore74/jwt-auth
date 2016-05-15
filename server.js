@@ -1,10 +1,12 @@
 // set up modules
-var express = require('express');
-var morgan = require('morgan');
-var path = require('path');
-var bodyParser = require('body-parser');
+var morgan       = require('morgan');
+var path         = require('path');
+var bodyParser   = require('body-parser');
 var cookieParser = require('cookie-parser');
+var express      = require('express');
+var mongoose     = require('./config/mongoose.js');
 
+var db  = mongoose();
 var app = express();
 
 // set up view engine
@@ -22,8 +24,11 @@ app.use('/images', express.static(path.join(__dirname) + '/app/views/images'));
 app.use('/styles', express.static(path.join(__dirname) + '/app/views/styles'));
 
 // set up routes
-app.use('/', require('./app/routes/index'));
-//app.use('/app', require('./app/routes/users'));
+app.use('/', require('./app/routes/index.routes'));
+app.use('/app', require('./app/routes/users.routes'));
+
+// set up api routes
+app.use('/api', require('./app/api/users.api'));
 
 // start server on port 3000
 app.listen(3000, function() {

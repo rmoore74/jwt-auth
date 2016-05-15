@@ -1,0 +1,10 @@
+doctype html
+html
+    include ../partials/header.pug
+    body.container
+        include ../partials/navbar.pug
+        .alert.alert-info.alert-dismissible(role='alert') 
+            button.close(type='button', data-dismiss='alert', aria-label='Close')
+                span(aria-hidden='true') &times;
+            p Welcome back Roger
+        h2 JWT Member Area
